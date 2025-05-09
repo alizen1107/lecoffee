@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+  @apply bg-gray-900;
+}
+
+/* Enhanced transitions */
+.page-transition {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.fade-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* Product card hover effects */
+.product-card {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.product-card:hover {
+  @apply transform scale-[1.02];
+}
+
+/* Button animations */
+.button-hover {
+  @apply transition-all duration-200 ease-in-out;
+}
+
+.button-hover:hover {
+  @apply transform scale-105;
+}
+
+.button-hover:active {
+  @apply transform scale-95;
+}
+
+/* Location dropdown animation */
+.dropdown-enter {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.dropdown-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 200ms, transform 200ms;
+}
+
+.dropdown-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 200ms, transform 200ms;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-600 rounded-full;
+}
+
+/* Navigation indicator animation */
+.nav-indicator {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.nav-indicator-active {
+  @apply transform scale-110;
+}
+
+/* Cart animation */
+.cart-item-enter {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.cart-item-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.cart-item-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.cart-item-exit-active {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 300ms, transform 300ms;
+}
